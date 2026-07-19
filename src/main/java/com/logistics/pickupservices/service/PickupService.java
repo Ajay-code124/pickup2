@@ -31,7 +31,7 @@ public class PickupService {
 	  dto.setProductName(savedPickup.getProductName());
 	  dto.setQuantity(savedPickup.getQuantity());
 	  
-	  ShipmentDto shipment = restTemplate.postForObject("http://localhost:8097/shipment/create",dto,ShipmentDto.class);
+	  ShipmentDto shipment = restTemplate.postForObject("http://shipment-service:8097/shipment/create",dto,ShipmentDto.class);
 		System.out.println("Shipment Created");
 		System.out.println(shipment);
 		
